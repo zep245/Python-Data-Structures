@@ -3,7 +3,7 @@ class Node:
         self.value = value
         self.next = None
         self.prev = None
-        
+
 
 class LinkedList:
     def __init__(self):
@@ -110,7 +110,7 @@ class LinkedList:
             current_node.next.prev = current_node.prev
             current_node = None
         self.length -= 1
-        
+
 
 
     def traverse(self):
@@ -137,7 +137,4 @@ linked.insert(0 , 100)
 # linked.pop_last()
 # linked.pop_last()
 linked.pop_any(1)
-
-
-
 

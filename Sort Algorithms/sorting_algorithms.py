@@ -87,7 +87,7 @@ def merge_sort(mylist):
         return merge_two_list(left, right)
     else:
         return mylist
-    
+
 # print(merge_sort(mylist))
 
 
@@ -108,7 +108,7 @@ def quick_sort(mylist):
                 left.append(item)
             else:
                 right.append(item)
-        
+
         return quick_sort(left) + [pivot] + quick_sort(right)
-    
+
 print(quick_sort(mylist))

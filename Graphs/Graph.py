@@ -10,7 +10,7 @@ class Graph:
             self.adjacency_list[vertex] = []
             return True
         return False
-    
+
     # add edge
     def add_edge(self , vertex1 , vertex2):
         if vertex1 and vertex2 in self.adjacency_list:
@@ -18,7 +18,7 @@ class Graph:
             self.adjacency_list[vertex2].append(vertex1)
             return True
         return False
-    
+
     # remove edge
     def remove_edge(self , vertex1 , vertex2):
         if vertex1 and vertex2 in self.adjacency_list:
@@ -26,7 +26,7 @@ class Graph:
             self.adjacency_list[vertex2].remove(vertex1)
             return True
         return False
-    
+
     # remove vertex
     def remove_vertex(self , vertex):
         if vertex in self.adjacency_list:
@@ -41,7 +41,7 @@ class Graph:
     def print_graph(self):
         for vertex in self.adjacency_list:
             print(f"{vertex} : {self.adjacency_list[vertex]}")
-    
+
 
 graph = Graph()
 graph.add_vertex(vertex="A")

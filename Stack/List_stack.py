@@ -8,32 +8,32 @@ class Stack:
             return True
         else:
             return False
-        
+
     def push(self, value):
         return self.list.append(value)
-    
+
     def pop(self):
         if self.isEmpty():
             return "Stack is empty"
         else:
             return self.list.pop()
-        
+
     def peek(self):
         if self.isEmpty():
             return "Stack is empty"
         else:
             return self.list[len(self.list)-1]
-        
+
     def delete(self):
         if self.isEmpty():
             return "Stack is empty"
         else:
             self.list = None
-            
+
     def traverse(self):
         value = [value for value in self.list]
         print(value)
-        
+
 
 stack = Stack()
 stack.push(10)

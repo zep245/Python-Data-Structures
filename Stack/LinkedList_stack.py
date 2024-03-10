@@ -18,7 +18,7 @@ class Stack:
             return True
         else:
             return False
-        
+
     def push(self , value):
         new_node = Node(value)
         new_node.next = self.linkedlist.head
@@ -31,7 +31,7 @@ class Stack:
             current_node = self.linkedlist.head
             current_node.next = self.linkedlist.head.next
             self.linkedlist.head = current_node.next
-        
+
     def peek(self):
         if self.isEmpty():
             return "The stack is empty"
@@ -41,14 +41,14 @@ class Stack:
     def delete(self):
         self.linkedlist.head = None
 
-    
+
     def traverse(self):
         current = self.linkedlist.head
         while current is not None:
             print(current.value)
             current = current.next
 
-        
+
 stack = Stack()
 stack.push(10)
 stack.push(20)
