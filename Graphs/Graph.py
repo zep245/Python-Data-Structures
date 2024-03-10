@@ -41,42 +41,6 @@ class Graph:
     def print_graph(self):
         for vertex in self.adjacency_list:
             print(f"{vertex} : {self.adjacency_list[vertex]}")
-
-
-    #Breadth First Search
-    def breadth_first_search(self , vertex):   
-
-        visted = []
-        queue = []
-        visted.append(vertex)
-        queue.append(vertex)
-
-        ''' The time complexity of the BFS algorithm is represented in the form of O(V + E), 
-        where V is the number of nodes and E is the number of edges
-        The space complexity of the algorithm is O(V).
-         '''
-
-        while queue:
-            current_vertex = queue.pop(0)
-            print(current_vertex)
-            for adjacency_vertex in self.adjacency_list[current_vertex]:
-                if adjacency_vertex not in visted:
-                    visted.append(adjacency_vertex)
-                    queue.append(adjacency_vertex)
-
-
-    def deapth_first_search(self , vertex):
-        visited = set()
-        visited.add(vertex)
-        stack = [vertex]
-        while stack:
-            current_vertex = stack.pop()
-            print(current_vertex)
-            for adj_vertex in self.adjacency_list[current_vertex]:
-                if adj_vertex not in visited:
-                    visited.add(adj_vertex)
-                    stack.append(adj_vertex)
-
     
 
 graph = Graph()
@@ -91,14 +55,5 @@ graph.add_edge("B" , "C")
 graph.add_edge("C" , "D")
 graph.add_edge("D" , "E")
 graph.add_edge("E" , "A")
+graph.remove_vertex("E")
 graph.print_graph()
-
-'''
-A : ['B', 'C', 'E']
-B : ['A', 'C']
-C : ['A', 'B', 'D']
-D : ['C', 'E']
-E : ['D', 'A']
-'''
-
-graph.breadth_first_search("A")
